@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <style>
+        body {
+            background-color: #36393f;
+            color: #dcddde;
+            font-family: Arial, sans-serif;
+        }
+
+        .settings-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #2e3136;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        button {
+            background-color: #7289da;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #677bc4;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Settings</h1>
+        <button id="toggle-dark-mode" type="button">Toggle Dark Mode</button>
+    </div>
+
+    <script>
+        function executeCode1() {
+            console.log("Better dark mode theme! (on)");
+            document.body.classList.add("theme-amoled");
+        }
+
+        function executeCode2() {
+            console.log("Better dark mode theme! (off)");
+            document.body.classList.remove("theme-amoled");
+        }
+
+        // Function to toggle dark mode when the button is clicked
+        function toggleDarkMode() {
+            const body = document.body;
+            if (body.classList.contains("theme-amoled")) {
+                executeCode2(); // Turn off dark mode
+            } else {
+                executeCode1(); // Turn on dark mode
+            }
+        }
+
+        // Attach click event listener to the button
+        const toggleButton = document.getElementById('toggle-dark-mode');
+        toggleButton.addEventListener('click', toggleDarkMode);
+    </script>
+</body>
+</html>

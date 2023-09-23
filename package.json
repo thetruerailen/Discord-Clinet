@@ -1,5 +1,5 @@
 {
-  "name": "Discord Client",
+  "name": "discordclient",
   "version": "1.0.0",
   "description": "A simple discord client!",
   "main": "index.js",
